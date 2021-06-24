@@ -219,9 +219,10 @@ class GWRStrategy:
 
         ds = GWRDataset(experiences.dataset[:][0], experiences.dataset[:][1])
 
-        self.episodic.init_network(ds, self.e_labels, self.num_context)
-
-        self.semantic.init_network(ds, self.s_labels, self.num_context)
+        # TODO: only run on first episode (not sure if this works)
+        if self.training_exp_counter < 1:
+            self.episodic.init_network(ds, self.e_labels, self.num_context)
+            self.semantic.init_network(ds, self.s_labels, self.num_context)
 
         # Normalize training and eval data.
         if not isinstance(experiences, Sequence):
@@ -442,10 +443,10 @@ class GWRStrategy:
             # Forward
             self.before_forward(**kwargs)
 
-            ### TODO: get vectors and labels
-            print(self.mbatch[0].shape)
             vectors = self.mbatch[0]
-            labels = np.zeros(len(self.e_labels), len(self.mbatch[1]))
+            labels = np.zeros((len(self.e_labels), len(self.mbatch[1])))
+            labels[0] = self.mbatch[1]
+            labels[1] = self.mbatch[1]
             self.episodic.train_egwr(
                 vectors,
                 labels,
@@ -496,9 +497,10 @@ class GWRStrategy:
             if self.train_replay:
                 self.replay_weights, self.replay_labels = self.replay_samples()
 
-            _, labels = self.semantic.test(vectors, labels, ret_vecs=True)
-            ### TODO: get labels
-            self.mb_output = None
+            # TODO: get semantic label output?
+            e_weights, e_labels = self.episodic.test(vectors, labels, ret_vecs=True)
+            pred_labels = self.semantic.test(e_weights, e_labels, ret_labels=True)
+            self.mb_output = pred_labels[0]
 
             self.after_forward(**kwargs)
 
@@ -621,11 +623,11 @@ class GWRStrategy:
 
             self.before_eval_forward(**kwargs)
 
-            vectors = None
-            labels = None
+            vectors = self.mbatch[0]
+            labels = np.zeros((len(self.e_labels), len(self.mbatch[1])))
             e_weights, e_labels = self.episodic.test(vectors, labels, ret_vecs=True)
-            _, labels = self.semantic.test(e_weights, e_labels, ret_vecs=True)
-            self.mb_output = None
+            labels = self.semantic.test(e_weights, e_labels, ret_labels=True)
+            self.mb_output = labels[0]
 
             self.after_eval_forward(**kwargs)
 

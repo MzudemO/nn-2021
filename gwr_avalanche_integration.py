@@ -4,7 +4,7 @@ import torchvision.transforms as transforms
 from avalanche.benchmarks.classic import SplitMNIST
 from avalanche.logging import TensorboardLogger, TextLogger, InteractiveLogger
 from avalanche.training.plugins import EvaluationPlugin
-from avalanche.evaluation import metrics
+from avalanche.evaluation.metrics import accuracy_metrics, timing_metrics, cpu_usage_metrics, disk_usage_metrics, forgetting_metrics
 
 from gwr_strategy import GWRStrategy
 
@@ -28,14 +28,14 @@ if __name__ == "__main__":
 
     eval_plugin = EvaluationPlugin(
         # resource metrics
-        metrics.timing_metrics(epoch=True, epoch_running=True),
-        metrics.cpu_usage(experience=True),
-        metrics.disk_usage(minibatch=True, epoch=True, experience=True, stream=True),
+        timing_metrics(epoch=True, epoch_running=True),
+        cpu_usage_metrics(experience=True),
+        disk_usage_metrics(minibatch=True, epoch=True, experience=True, stream=True),
         # performance metrics
-        metrics.accuracy_metrics(
+        accuracy_metrics(
             minibatch=True, epoch=True, experience=True, stream=True
         ),
-        metrics.forgetting_metrics(experience=True, stream=True),
+        forgetting_metrics(experience=True, stream=True),
         # loggers
         loggers=[tb_logger, text_logger, interactive_logger],
     )

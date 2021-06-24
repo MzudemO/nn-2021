@@ -106,7 +106,7 @@ class EpisodicGWR(GammaGWR):
                         return
                 else:
                     ind_c += 1
-            print("(-- Removed %s neuron(s))" % rem_c)
+            # print("(-- Removed %s neuron(s))" % rem_c)
 
     def train_egwr(
         self,
@@ -150,8 +150,6 @@ class EpisodicGWR(GammaGWR):
             for iteration in range(0, self.samples):
 
                 # Generate input sample
-                print(ds_vectors[iteration])
-                input("waiting")
                 self.g_context[0] = ds_vectors[iteration]
                 label = ds_labels[:, iteration]
 
@@ -235,10 +233,10 @@ class EpisodicGWR(GammaGWR):
             # Average quantization error (AQE)
             error_counter[epoch] /= self.samples
 
-            print(
-                "(Epoch: %s, NN: %s, ATQE: %s)"
-                % (epoch + 1, self.num_nodes, error_counter[epoch])
-            )
+            # print(
+            #     "(Epoch: %s, NN: %s, ATQE: %s)"
+            #     % (epoch + 1, self.num_nodes, error_counter[epoch])
+            # )
 
         # Remove isolated neurons
         self.remove_isolated_nodes()
@@ -246,6 +244,7 @@ class EpisodicGWR(GammaGWR):
     def test(self, ds_vectors, ds_labels, **kwargs):
         test_accuracy = kwargs.get("test_accuracy", False)
         test_vecs = kwargs.get("ret_vecs", False)
+        test_labels = kwargs.get("ret_labels", False)
         test_samples = ds_vectors.shape[0]
         self.bmus_index = -np.ones(test_samples)
         self.bmus_weight = np.zeros((test_samples, self.dimension))
@@ -282,3 +281,6 @@ class EpisodicGWR(GammaGWR):
             s_labels = -np.ones((1, test_samples))
             s_labels[0] = self.bmus_label[1]
             return self.bmus_weight, s_labels
+
+        if test_labels:
+            return self.bmus_label
