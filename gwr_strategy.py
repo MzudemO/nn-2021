@@ -443,12 +443,14 @@ class GWRStrategy:
             self.before_forward(**kwargs)
 
             ### TODO: get vectors and labels
+            print(self.mbatch)
+            input("a")
             vectors = None
             labels = None
             self.episodic.train_egwr(
                 vectors,
                 labels,
-                self.training_epochs,
+                self.train_epochs,
                 self.a_threshold[0],
                 self.beta,
                 self.learning_rates,
@@ -461,7 +463,7 @@ class GWRStrategy:
             self.semantic.train_egwr(
                 e_weights,
                 e_labels,
-                self.training_epochs,
+                self.train_epochs,
                 self.a_threshold[1],
                 self.beta,
                 self.learning_rates,
@@ -474,7 +476,7 @@ class GWRStrategy:
                     self.episodic.train_egwr(
                         self.replay_weights[r],
                         self.replay_labels[r, :],
-                        self.training_epochs,
+                        self.train_epochs,
                         self.a_threshold[0],
                         self.beta,
                         self.learning_rates,
@@ -484,7 +486,7 @@ class GWRStrategy:
                     self.semantic.train_egwr(
                         self.replay_weights[r],
                         self.replay_labels[r],
-                        self.training_epochs,
+                        self.train_epochs,
                         self.a_threshold[1],
                         self.beta,
                         self.learning_rates,
