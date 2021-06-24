@@ -444,8 +444,6 @@ class GWRStrategy:
 
             ### TODO: get vectors and labels
             print(self.mbatch[0].shape)
-            print(self.mbatch.shape)
-            print(self.mbatch)
             vectors = self.mbatch[0]
             labels = np.zeros(len(self.e_labels), len(self.mbatch[1]))
             self.episodic.train_egwr(
@@ -471,8 +469,6 @@ class GWRStrategy:
                 self.context,
                 regulated=True,
             )
-
-            input("a")
 
             if self.train_replay and self.training_exp_counter > 0:
                 for r in range(0, self.replay_weights.shape[0]):
