@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 
 import numpy as np
 
-from gwr import EpisodicGWR
+from episodic_gwr import EpisodicGWR
 from data_utils import GWRDataset
 
 ### ADAPTED FROM AVALANCHE BASESTRATEGY (https://github.com/ContinualAI/avalanche/blob/master/avalanche/training/strategies/base_strategy.py)
