@@ -214,14 +214,14 @@ class GWRStrategy:
         self._stop_training = False
 
         # Initialize GWR with training data
-        e_labels = [10, 10]
-        s_labels = [10]
+        self.e_labels = [10, 10]
+        self.s_labels = [10]
 
         ds = GWRDataset(experiences.dataset[:][0], experiences.dataset[:][1])
 
-        self.episodic.init_network(ds, e_labels, self.num_context)
+        self.episodic.init_network(ds, self.e_labels, self.num_context)
 
-        self.semantic.init_network(ds, s_labels, self.num_context)
+        self.semantic.init_network(ds, self.s_labels, self.num_context)
 
         # Normalize training and eval data.
         if not isinstance(experiences, Sequence):
@@ -443,10 +443,11 @@ class GWRStrategy:
             self.before_forward(**kwargs)
 
             ### TODO: get vectors and labels
+            print(self.mbatch[0].shape)
+            print(self.mbatch.shape)
             print(self.mbatch)
-            input("a")
-            vectors = None
-            labels = None
+            vectors = self.mbatch[0]
+            labels = np.zeros(len(self.e_labels), len(self.mbatch[1]))
             self.episodic.train_egwr(
                 vectors,
                 labels,
@@ -470,6 +471,8 @@ class GWRStrategy:
                 self.context,
                 regulated=True,
             )
+
+            input("a")
 
             if self.train_replay and self.training_exp_counter > 0:
                 for r in range(0, self.replay_weights.shape[0]):
