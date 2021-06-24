@@ -1,6 +1,4 @@
-from numpy.lib import triu_indices
 import torch
-from torch._C import namedtuple_P_L_U
 from torch.utils.data import DataLoader
 from typing import Optional, Sequence, Union
 
@@ -20,6 +18,7 @@ if TYPE_CHECKING:
 import numpy as np
 
 from gwr import EpisodicGWR
+from data_utils import GWRDataset
 
 ### ADAPTED FROM AVALANCHE BASESTRATEGY (https://github.com/ContinualAI/avalanche/blob/master/avalanche/training/strategies/base_strategy.py)
 class GWRStrategy:
@@ -96,6 +95,8 @@ class GWRStrategy:
         self.context = True
 
         self.num_context = 2
+
+        self.train_replay = False
 
         self.replay_size = (self.num_context * 2) + 1
 
@@ -213,10 +214,10 @@ class GWRStrategy:
         self._stop_training = False
 
         # Initialize GWR with training data
-        e_labels = []
-        s_labels = []
+        e_labels = [10, 10]
+        s_labels = [10]
 
-        ds = None
+        ds = GWRDataset(experiences.dataset[:][0], experiences.dataset[:][1])
 
         self.episodic.init_network(ds, e_labels, self.num_context)
 
