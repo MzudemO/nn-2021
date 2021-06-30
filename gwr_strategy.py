@@ -5,7 +5,6 @@ from typing import Optional, Sequence, Union
 from avalanche.benchmarks.scenarios import Experience
 from avalanche.benchmarks.utils.data_loader import TaskBalancedDataLoader
 from avalanche.models import DynamicModule
-from avalanche.models.dynamic_optimizers import reset_optimizer
 from avalanche.models.utils import avalanche_forward
 from avalanche.training.plugins.evaluation import default_logger
 from typing import TYPE_CHECKING
@@ -31,6 +30,7 @@ class GWRStrategy:
         plugins: Optional[Sequence["StrategyPlugin"]] = None,
         evaluator=default_logger,
         eval_every=-1,
+        config={},
     ):
         """
         BaseStrategy is the super class of all task-based continual learning
@@ -86,17 +86,21 @@ class GWRStrategy:
 
         self.semantic = EpisodicGWR()
 
-        self.a_threshold = [0.3, 0.001]
+        self.a_threshold = config["a_threshold"]
 
-        self.beta = 0.7
+        self.beta = config["beta"]
 
-        self.learning_rates = [0.5, 0.005]
+        self.learning_rates = config["learning_rates"]
 
-        self.context = True
+        self.context = config["context"]
 
-        self.num_context = 2
+        self.num_context = config["num_context"]
 
-        self.train_replay = False
+        self.train_replay = config["train_replay"]
+
+        self.e_labels = config["e_labels"]
+
+        self.s_labels = config["s_labels"]
 
         self.replay_size = (self.num_context * 2) + 1
 
@@ -214,12 +218,9 @@ class GWRStrategy:
         self._stop_training = False
 
         # Initialize GWR with training data
-        self.e_labels = [10, 10]
-        self.s_labels = [10]
 
         ds = GWRDataset(experiences.dataset[:][0], experiences.dataset[:][1])
 
-        # TODO: only run on first episode (not sure if this works)
         if self.training_exp_counter < 1:
             self.episodic.init_network(ds, self.e_labels, self.num_context)
             self.semantic.init_network(ds, self.s_labels, self.num_context)
@@ -252,18 +253,11 @@ class GWRStrategy:
         """
         self.experience = experience
 
-        ### TODO: set GWR to training mode if needed
-
         # Data Adaptation (e.g. add new samples/data augmentation)
         self.before_train_dataset_adaptation(**kwargs)
         self.train_dataset_adaptation(**kwargs)
         self.after_train_dataset_adaptation(**kwargs)
         self.make_train_dataloader(**kwargs)
-
-        # Model Adaptation (e.g. freeze/add new units)
-        ### TODO: GWR model adaptation if required
-        # self.model_adaptation()
-        # self.make_optimizer()
 
         self.before_training_exp(**kwargs)
 
@@ -313,8 +307,6 @@ class GWRStrategy:
         self.dataloader = _prev_state[3]
         self.is_training = _prev_state[4]
 
-        ### TODO: set GWR to training mode if required
-
     def stop_training(self):
         """ Signals to stop training at the next iteration. """
         self._stop_training = True
@@ -336,8 +328,6 @@ class GWRStrategy:
         """
         self.is_training = False
 
-        ### TODO: set GWR to eval mode if required
-
         if not isinstance(exp_list, Sequence):
             exp_list = [exp_list]
 
@@ -348,10 +338,6 @@ class GWRStrategy:
             self.eval_dataset_adaptation(**kwargs)
             self.after_eval_dataset_adaptation(**kwargs)
             self.make_eval_dataloader(**kwargs)
-
-            # Model Adaptation (e.g. freeze/add new units)
-            ### TODO: GWR model adaptation if required
-            # self.model_adaptation()
 
             self.before_eval_exp(**kwargs)
             self.eval_epoch(**kwargs)
@@ -497,7 +483,6 @@ class GWRStrategy:
             if self.train_replay:
                 self.replay_weights, self.replay_labels = self.replay_samples()
 
-            # TODO: get semantic label output?
             e_weights, e_labels = self.episodic.test(vectors, labels, ret_vecs=True)
             pred_labels = self.semantic.test(e_weights, e_labels, ret_labels=True)
             self.mb_output = pred_labels[0]
@@ -529,7 +514,7 @@ class GWRStrategy:
                     samples[r] = np.argmax(
                         self.episodic.temporal[int(samples[r - 1]), :]
                     )
-                r_weights[i, r] = self.episodic.weights[int(samples[r]), 0]
+                r_weights[i, r] = self.episodic.weights[int(samples[r])][0]
                 for l in range(0, len(self.episodic.num_labels)):
                     r_labels[i, l, r] = np.argmax(
                         self.episodic.alabels[l][int(samples[r])]
@@ -625,6 +610,8 @@ class GWRStrategy:
 
             vectors = self.mbatch[0]
             labels = np.zeros((len(self.e_labels), len(self.mbatch[1])))
+            labels[0] = self.mbatch[1]
+            labels[1] = self.mbatch[1]
             e_weights, e_labels = self.episodic.test(vectors, labels, ret_vecs=True)
             labels = self.semantic.test(e_weights, e_labels, ret_labels=True)
             self.mb_output = labels[0]
@@ -669,9 +656,3 @@ class GWRStrategy:
 
     def forward(self):
         return avalanche_forward(self.model, self.mb_x, self.mb_task_id)
-
-    def make_optimizer(self):
-        # we reset the optimizer's state after each experience.
-        # This allows to add new parameters (new heads) and
-        # freezing old units during the model's adaptation phase.
-        reset_optimizer(self.optimizer, self.model)

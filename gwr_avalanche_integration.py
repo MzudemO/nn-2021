@@ -4,7 +4,14 @@ import torchvision.transforms as transforms
 from avalanche.benchmarks.classic import SplitMNIST
 from avalanche.logging import TensorboardLogger, TextLogger, InteractiveLogger
 from avalanche.training.plugins import EvaluationPlugin
-from avalanche.evaluation.metrics import accuracy_metrics, timing_metrics, cpu_usage_metrics, disk_usage_metrics, forgetting_metrics
+from avalanche.evaluation.metrics import (
+    accuracy_metrics,
+    timing_metrics,
+    cpu_usage_metrics,
+    disk_usage_metrics,
+    forgetting_metrics,
+    confusion_matrix_metrics,
+)
 
 from gwr_strategy import GWRStrategy
 
@@ -32,16 +39,32 @@ if __name__ == "__main__":
         cpu_usage_metrics(experience=True),
         disk_usage_metrics(minibatch=True, epoch=True, experience=True, stream=True),
         # performance metrics
-        accuracy_metrics(
-            minibatch=True, epoch=True, experience=True, stream=True
-        ),
+        accuracy_metrics(minibatch=True, epoch=True, experience=True, stream=True),
         forgetting_metrics(experience=True, stream=True),
+        # additional visualization
+        confusion_matrix_metrics(save_image=True),
         # loggers
         loggers=[tb_logger, text_logger, interactive_logger],
     )
 
+    # SplitMNIST config - needs some testing to figure out good values
+    config = {
+        "a_threshold": [0.95, 0.9],
+        "beta": 0.7,
+        "learning_rates": [0.2, 0.001],
+        "context": True,
+        "num_context": 1,
+        "train_replay": True,
+        "e_labels": [10, 10],
+        "s_labels": [10],
+    }
+
     cl_strategy = GWRStrategy(
-        train_mb_size=500, train_epochs=1, eval_mb_size=100, evaluator=eval_plugin
+        train_mb_size=100,
+        train_epochs=1,
+        eval_mb_size=50,
+        evaluator=eval_plugin,
+        config=config,
     )
 
     print("Starting experiment...")
