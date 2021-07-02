@@ -1,0 +1,26 @@
+
+Final evaluation stream for thresholds 0.1, 0.1: 8.89% accuracy, 0.09535245639368758 forgetting
+Final evaluation stream for thresholds 0.1, 0.30000000000000004: 29.09% accuracy, 0.26319678087933945 forgetting
+Final evaluation stream for thresholds 0.1, 0.5000000000000001: 53.16% accuracy, 0.28876113670283 forgetting
+Final evaluation stream for thresholds 0.1, 0.7000000000000001: 54.03% accuracy, 0.24443989629854113 forgetting
+Final evaluation stream for thresholds 0.1, 0.9000000000000001: 45.16% accuracy, 0.3228252172820466 forgetting
+Final evaluation stream for thresholds 0.30000000000000004, 0.1: 8.12% accuracy, 0.11737636982527538 forgetting
+Final evaluation stream for thresholds 0.30000000000000004, 0.30000000000000004: 31.669999999999998% accuracy, 0.11709542627111182 forgetting
+Final evaluation stream for thresholds 0.30000000000000004, 0.5000000000000001: 49.559999999999995% accuracy, 0.07809788303958931 forgetting
+Final evaluation stream for thresholds 0.30000000000000004, 0.7000000000000001: 34.06% accuracy, 0.25133339371847035 forgetting
+Final evaluation stream for thresholds 0.30000000000000004, 0.9000000000000001: 36.35% accuracy, 0.1922920593458638 forgetting
+Final evaluation stream for thresholds 0.5000000000000001, 0.1: 9.84% accuracy, 0.10813461162463003 forgetting
+Final evaluation stream for thresholds 0.5000000000000001, 0.30000000000000004: 32.58% accuracy, 0.03027384388829167 forgetting
+Final evaluation stream for thresholds 0.5000000000000001, 0.5000000000000001: 39.96% accuracy, 0.17626009604784965 forgetting
+Final evaluation stream for thresholds 0.5000000000000001, 0.7000000000000001: 36.309999999999995% accuracy, 0.0852426184766219 forgetting
+Final evaluation stream for thresholds 0.5000000000000001, 0.9000000000000001: 32.269999999999996% accuracy, 0.16551667185779684 forgetting
+Final evaluation stream for thresholds 0.7000000000000001, 0.1: 20.16% accuracy, 0.0885085955712176 forgetting
+Final evaluation stream for thresholds 0.7000000000000001, 0.30000000000000004: 23.630000000000003% accuracy, 0.22710494192383457 forgetting
+Final evaluation stream for thresholds 0.7000000000000001, 0.5000000000000001: 37.53% accuracy, 0.10975836425803744 forgetting
+Final evaluation stream for thresholds 0.7000000000000001, 0.7000000000000001: 33.19% accuracy, 0.27524275910213813 forgetting
+Final evaluation stream for thresholds 0.7000000000000001, 0.9000000000000001: 50.71% accuracy, -0.02855894858118992 forgetting
+Final evaluation stream for thresholds 0.9000000000000001, 0.1: 18.19% accuracy, 0.08604811683739391 forgetting
+Final evaluation stream for thresholds 0.9000000000000001, 0.30000000000000004: 26.5% accuracy, 0.07531305964969842 forgetting
+Final evaluation stream for thresholds 0.9000000000000001, 0.5000000000000001: 43.29% accuracy, 0.09485346751486207 forgetting
+Final evaluation stream for thresholds 0.9000000000000001, 0.7000000000000001: 30.42% accuracy, 0.17868570738874065 forgetting
+Final evaluation stream for thresholds 0.9000000000000001, 0.9000000000000001: 32.910000000000004% accuracy, 0.31889132833020206 forgetting

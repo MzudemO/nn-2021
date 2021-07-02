@@ -14,6 +14,7 @@ from avalanche.evaluation.metrics import (
 )
 
 import numpy as np
+import itertools
 
 from gwr_strategy import GWRStrategy
 
@@ -31,7 +32,7 @@ scenario = SplitMNIST(
 )
 
 tb_logger = TensorboardLogger()
-text_logger = TextLogger(open("log.txt", "a"))
+text_logger = TextLogger(open("log_hyperparams_20210702.txt", "a"))
 interactive_logger = InteractiveLogger()
 
 eval_plugin = EvaluationPlugin(
@@ -61,9 +62,9 @@ config = {
 }
 
 thresholds = []
-forgetting = []
+forgettings = []
 accuracies = []
-grid = zip(np.arange(0.1, 1.0, 0.2), np.arange(0.1, 1.0, 0.2))
+grid = itertools.product(np.arange(0.1, 1.0, 0.2), np.arange(0.1, 1.0, 0.2))
 for e_t, s_t in grid:
     config["a_threshold"] = [e_t, s_t]
     cl_strategy = GWRStrategy(
@@ -78,32 +79,34 @@ for e_t, s_t in grid:
     results = []
     for experience in scenario.train_stream:
         print("Start of experience: ", experience.current_experience)
-        print("Current Classes: ", experience.classes_in_this_experience)
+        # print("Current Classes: ", experience.classes_in_this_experience)
 
         # train returns a dictionary which contains all the metric values
         res = cl_strategy.train(experience)
-        print("Training completed")
+        # print("Training completed")
 
-        print("Computing accuracy on the whole test set")
+        # print("Computing accuracy on the whole test set")
         # test also returns a dictionary which contains all the metric values
         results.append(cl_strategy.eval(scenario.test_stream))
 
-    acc = results[-1]["Top1_Acc_Epoch/train_phase/test_stream/Task000"]
+    acc = results[-1]["Top1_Acc_Stream/eval_phase/test_stream/Task000"]
     forgetting = results[-1]["StreamForgetting/eval_phase/test_stream"]
     print(
         f"Final evaluation stream for thresholds {e_t}, {s_t}: {acc * 100}% accuracy, {forgetting} forgetting"
     )
     thresholds.append([e_t, s_t])
     accuracies.append(acc)
-    forgetting.append(forgetting)
+    forgettings.append(forgetting)
 
 accuracies = np.array(accuracies)
-forgetting = np.array(forgetting)
+forgettings = np.array(forgettings)
+
+grid = list(grid)
 
 max_acc = np.max(accuracies)
 max_acc_parameters = grid[np.argmax(accuracies)]
-min_forgetting = np.min(forgetting)
-min_forgetting_parameters = grid[np.argmin(forgetting)]
+min_forgetting = np.min(forgettings)
+min_forgetting_parameters = grid[np.argmin(forgettings)]
 
 print(grid)
 print(accuracies)
