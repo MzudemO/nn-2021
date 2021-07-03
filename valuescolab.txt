@@ -1,0 +1,11 @@
+values from Colab 
+
+
+1. Final evaluation stream for thresholds 0.1, 0.5: 54.89000000000001% accuracy, 0.08668536528874493 forgetting
+2. Final evaluation stream for thresholds 0.1, 0.55: 47.03% accuracy, 0.18495502566576014 forgetting
+3. Final evaluation stream for thresholds 0.1, 0.6000000000000001: 59.61% accuracy, 0.002081783306559837 forgetting
+4. Final evaluation stream for thresholds 0.1, 0.6500000000000001: 47.370000000000005% accuracy, 0.10109768482140348 forgetting
+5. Final evaluation stream for thresholds 0.15000000000000002, 0.5: 50.39% accuracy, 0.12146169415279166 forgetting
+6. Final evaluation stream for thresholds 0.15000000000000002, 0.55: 51.080000000000005% accuracy, 0.17948292929773843 forgetting
+7. Final evaluation stream for thresholds 0.15000000000000002, 0.6000000000000001: 41.02% accuracy, 0.22412047995270404 forgetting
+8. Final evaluation stream for thresholds 0.15000000000000002, 0.6500000000000001: 46.58% accuracy, 0.18531050865440182 forgetting

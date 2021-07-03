@@ -1,0 +1,11 @@
+Values from local simulation 
+
+
+1. Final evaluation stream for thresholds 0.1, 0.5: 47.69% accuracy, 0.2732596811822023 forgetting
+2. Final evaluation stream for thresholds 0.1, 0.55: 47.63% accuracy, 0.16469418045396406 forgetting
+3. Final evaluation stream for thresholds 0.1, 0.6000000000000001: 39.36% accuracy, 0.15118453030074083 forgetting
+4. Final evaluation stream for thresholds 0.1, 0.6500000000000001: 44.58% accuracy, 0.2682762068580671 forgetting
+5. Final evaluation stream for thresholds 0.15000000000000002, 0.5: 37.47% accuracy, 0.3849975161972988 forgetting
+6. Final evaluation stream for thresholds 0.15000000000000002, 0.55: 38.86% accuracy, 0.23656363228012506 forgetting
+7. Final evaluation stream for thresholds 0.15000000000000002, 0.6000000000000001: 40.050000000000004% accuracy, 0.17083044207760179 forgetting
+8. Final evaluation stream for thresholds 0.15000000000000002, 0.6500000000000001: 35.410000000000004% accuracy, 0.1890807250117672 forgetting
