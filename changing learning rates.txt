@@ -1,0 +1,41 @@
+
+check the list out of range .... 
+put the values used
+see=1234
+Threshold = 0.1,0.6
+num_context = 2
+beta = 0.7
+train_epochs = 1
+train_mb_size = 100
+eval_mb_size = 50
+
+
+Final evaluation stream for learning rates 0.2, 0.001: 50.74999999999999% accuracy, -0.15196209300602023 forgetting
+Final evaluation stream for learning rates 0.2, 0.002: 53.580000000000005% accuracy, 0.1264614338979482 forgetting
+Final evaluation stream for learning rates 0.2, 0.003: 52.78% accuracy, 0.03698483806111038 forgetting
+Final evaluation stream for learning rates 0.2, 0.004: 42.970000000000006% accuracy, 0.20728754360359375 forgetting
+Final evaluation stream for learning rates 0.30000000000000004, 0.001: 57.3% accuracy, 0.08586543657758307 forgetting
+Final evaluation stream for learning rates 0.30000000000000004, 0.002: 51.76% accuracy, -0.045505120630483425 forgetting
+Final evaluation stream for learning rates 0.30000000000000004, 0.003: 44.91% accuracy, 0.1736246036532828 forgetting
+Final evaluation stream for learning rates 0.30000000000000004, 0.004: 50.33% accuracy, 0.14373725553627265 forgetting
+Final evaluation stream for learning rates 0.4000000000000001, 0.001: 52.1% accuracy, 0.14214806094793048 forgetting
+Final evaluation stream for learning rates 0.4000000000000001, 0.002: 46.27% accuracy, 0.122060896605601 forgetting
+Final evaluation stream for learning rates 0.4000000000000001, 0.003: 33.69% accuracy, 0.1948666196522925 forgetting
+Final evaluation stream for learning rates 0.4000000000000001, 0.004: 33.839999999999996% accuracy, 0.2943123881251854 forgetting
+
+now we num_context = 1
+Final evaluation stream for learning rates 0.2, 0.001: 53.25% accuracy, 0.09438555875020323 forgetting
+Final evaluation stream for learning rates 0.2, 0.002: 41.83% accuracy, 0.14077260990969329 forgetting
+Final evaluation stream for learning rates 0.2, 0.003: 39.83% accuracy, 0.2747973465804807 forgetting
+Final evaluation stream for learning rates 0.2, 0.004: 18.310000000000002% accuracy, 0.3524502471147297 forgetting
+Final evaluation stream for learning rates 0.30000000000000004, 0.001: 34.339999999999996% accuracy, 0.24219340530777916 forgetting
+Final evaluation stream for learning rates 0.30000000000000004, 0.002: 48.16% accuracy, 0.22387397885892937 forgetting
+Final evaluation stream for learning rates 0.30000000000000004, 0.003: 34.03% accuracy, 0.10563863461206949 forgetting
+Final evaluation stream for learning rates 0.30000000000000004, 0.004: 46.46% accuracy, 0.1733651888644297 forgetting
+Final evaluation stream for learning rates 0.4000000000000001, 0.001: 48.309999999999995% accuracy, 0.1704894810641307 forgetting
+Final evaluation stream for learning rates 0.4000000000000001, 0.002: 36.309999999999995% accuracy, 0.23397860039109236 forgetting
+Final evaluation stream for learning rates 0.4000000000000001, 0.003: 37.0% accuracy, 0.20888150454278465 forgetting
+Final evaluation stream for learning rates 0.4000000000000001, 0.004: 32.05% accuracy, 0.28051944508666476 forgetting
+
+
+
