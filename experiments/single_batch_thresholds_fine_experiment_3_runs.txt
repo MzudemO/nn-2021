@@ -1,0 +1,99 @@
+========================
+first run
+========================
+
+config = {
+    "a_threshold": [0.1, 0.6],
+    "beta": 0.7,
+    "learning_rates": [0.3, 0.001],
+    "context": True,
+    "num_context": 2,
+    "train_replay": True,
+    "e_labels": [10, 10],
+    "s_labels": [10],
+}
+
+[0.1, 0.2]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.2: 32.78% accuracy, 0.7157901866659865 forgetting
+[0.1, 0.1]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.1: 35.38% accuracy, 0.5567565078892284 forgetting
+[0.1, 0.05]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.05: 19.6% accuracy, 0.08750848902167375 forgetting
+[0.1, 0.01]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.01: 9.8% accuracy, 0.0 forgetting
+[0.1, 0.005]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.005: 9.8% accuracy, 0.0 forgetting
+[0.1, 0.001]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.001: 9.8% accuracy, 0.0 forgetting
+[[0.1, 0.2], [0.1, 0.1], [0.1, 0.05], [0.1, 0.01], [0.1, 0.005], [0.1, 0.001]]
+[0.3278 0.3538 0.196  0.098  0.098  0.098 ]
+[0.71579019 0.55675651 0.08750849 0.         0.         0.        ]
+__________
+Best values for accuracy: [0.1, 0.1] with 0.3538
+Best values for forgetting: [0.1, 0.01] with 0.0
+
+
+
+========================
+second run
+========================
+
+[0.2, 0.2]
+Starting experiment...
+Final evaluation stream for thresholds 0.2, 0.2: 28.46% accuracy, 0.7649990133823441 forgetting
+[0.2, 0.1]
+Starting experiment...
+Final evaluation stream for thresholds 0.2, 0.1: 28.1% accuracy, 0.48849793829472243 forgetting
+[0.2, 0.05]
+Starting experiment...
+Final evaluation stream for thresholds 0.2, 0.05: 9.58% accuracy, 0.2133275965669513 forgetting
+[0.1, 0.2]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.2: 29.299999999999997% accuracy, 0.7898863452239131 forgetting
+[0.1, 0.1]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.1: 24.529999999999998% accuracy, 0.7665166957800602 forgetting
+[0.1, 0.05]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.05: 9.8% accuracy, 0.10992217898832685 forgetting
+[[0.2, 0.2], [0.2, 0.1], [0.2, 0.05], [0.1, 0.2], [0.1, 0.1], [0.1, 0.05]]
+[0.2846 0.281  0.0958 0.293  0.2453 0.098 ]
+[0.76499901 0.48849794 0.2133276  0.78988635 0.7665167  0.10992218]
+__________
+Best values for accuracy: [0.1, 0.2] with 0.293
+Best values for forgetting: [0.1, 0.05] with 0.10992217898832685
+
+========================
+third run
+========================
+
+[0.2, 0.2]
+Starting experiment...
+Final evaluation stream for thresholds 0.2, 0.2: 24.740000000000002% accuracy, 0.7788231375215071 forgetting
+[0.2, 0.1]
+Starting experiment...
+Final evaluation stream for thresholds 0.2, 0.1: 18.790000000000003% accuracy, 0.5906448754508113 forgetting
+[0.2, 0.05]
+Starting experiment...
+Final evaluation stream for thresholds 0.2, 0.05: 14.330000000000002% accuracy, 0.1434269192402887 forgetting
+[0.1, 0.2]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.2: 33.61% accuracy, 0.6304588676421314 forgetting
+[0.1, 0.1]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.1: 31.900000000000002% accuracy, 0.42080138620540963 forgetting
+[0.1, 0.05]
+Starting experiment...
+Final evaluation stream for thresholds 0.1, 0.05: 15.55% accuracy, -0.05157215286949854 forgetting
+[[0.2, 0.2], [0.2, 0.1], [0.2, 0.05], [0.1, 0.2], [0.1, 0.1], [0.1, 0.05]]
+[0.2474 0.1879 0.1433 0.3361 0.319  0.1555]
+[ 0.77882314  0.59064488  0.14342692  0.63045887  0.42080139 -0.05157215]
+__________
+Best values for accuracy: [0.1, 0.2] with 0.3361
+Best values for forgetting: [0.1, 0.05] with -0.05157215286949854
