@@ -1,0 +1,615 @@
+Starting experiment...
+Start of experience:  0
+Current Classes:  [6]
+-- >> Start of training phase << --
+-- Starting training on experience 0 (Task 0) from train stream --
+100%|██████████| 60/60 [00:17<00:00,  3.37it/s]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60208.7412
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60208.7412
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0017
+	Time_Epoch/train_phase/train_stream/Task000 = 17.7915
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.9998
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 1.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 15.40it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 99.4644
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60209.2246
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 1.0000
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60209.2246
+	StreamForgetting/eval_phase/test_stream = 0.0000
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 1.0000
+Start of experience:  1
+Current Classes:  [8]
+-- >> Start of training phase << --
+-- Starting training on experience 1 (Task 0) from train stream --
+100%|██████████| 59/59 [01:22<00:00,  1.40s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60209.7588
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60209.7588
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0173
+	Time_Epoch/train_phase/train_stream/Task000 = 82.8664
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.9624
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.9804
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 11.82it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 99.8041
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60210.2422
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.2578
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.7422
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 11.42it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 98.9619
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60210.6094
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.9969
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60210.6094
+	StreamForgetting/eval_phase/test_stream = 0.2578
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.8706
+Start of experience:  2
+Current Classes:  [3]
+-- >> Start of training phase << --
+-- Starting training on experience 2 (Task 0) from train stream --
+100%|██████████| 62/62 [01:33<00:00,  1.51s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60211.1436
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60211.1436
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0226
+	Time_Epoch/train_phase/train_stream/Task000 = 93.4279
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.5166
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.5806
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.56it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 100.0102
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60211.6270
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.1722
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.8278
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.76it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 97.5151
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60211.9951
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp001 = 0.0626
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.9343
+-- Starting eval on experience 2 (Task 0) from test stream --
+100%|██████████| 21/21 [00:01<00:00, 11.17it/s]
+> Eval on experience 2 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 98.6690
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 60212.3623
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp002 = 0.6277
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60212.3623
+	StreamForgetting/eval_phase/test_stream = 0.1174
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.7944
+Start of experience:  3
+Current Classes:  [5]
+-- >> Start of training phase << --
+-- Starting training on experience 3 (Task 0) from train stream --
+100%|██████████| 55/55 [01:29<00:00,  1.63s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60212.8965
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60212.8965
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0276
+	Time_Epoch/train_phase/train_stream/Task000 = 89.9127
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.1880
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.1429
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:02<00:00,  9.57it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 98.0960
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60213.3799
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.2975
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.7025
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:02<00:00,  9.80it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 99.6092
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60213.7471
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp001 = 0.3368
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.6602
+-- Starting eval on experience 2 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00,  9.84it/s]
+> Eval on experience 2 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 98.5346
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 60214.1143
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp002 = -0.2495
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp002 = 0.8772
+-- Starting eval on experience 3 (Task 0) from test stream --
+100%|██████████| 18/18 [00:01<00:00,  9.99it/s]
+> Eval on experience 3 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 99.1835
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 60214.4824
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp003 = 0.3027
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60214.4824
+	StreamForgetting/eval_phase/test_stream = 0.1282
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.6448
+Start of experience:  4
+Current Classes:  [9]
+-- >> Start of training phase << --
+-- Starting training on experience 4 (Task 0) from train stream --
+100%|██████████| 60/60 [01:33<00:00,  1.56s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60215.0166
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60215.0166
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0260
+	Time_Epoch/train_phase/train_stream/Task000 = 93.5511
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.4823
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.8980
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.95it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 98.4387
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60215.5000
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.3507
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.6493
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.10it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 96.6329
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60215.8672
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp001 = 0.2875
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.7094
+-- Starting eval on experience 2 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00, 10.18it/s]
+> Eval on experience 2 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 98.9255
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 60216.2344
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp002 = -0.1812
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp002 = 0.8089
+-- Starting eval on experience 3 (Task 0) from test stream --
+100%|██████████| 18/18 [00:01<00:00,  9.77it/s]
+> Eval on experience 3 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 98.2806
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 60216.6025
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp003 = -0.0370
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp003 = 0.3397
+-- Starting eval on experience 4 (Task 0) from test stream --
+100%|██████████| 21/21 [00:01<00:00, 10.71it/s]
+> Eval on experience 4 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 97.4736
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 60216.9707
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp004 = 0.8741
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60216.9707
+	StreamForgetting/eval_phase/test_stream = 0.1050
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.6845
+Start of experience:  5
+Current Classes:  [1]
+-- >> Start of training phase << --
+-- Starting training on experience 5 (Task 0) from train stream --
+100%|██████████| 68/68 [01:45<00:00,  1.55s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60217.5049
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60217.5049
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0219
+	Time_Epoch/train_phase/train_stream/Task000 = 105.3991
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6326
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.5238
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.30it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 98.0924
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60217.9893
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.3737
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.6263
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.10it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 97.7287
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60218.3564
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp001 = 0.8255
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.1715
+-- Starting eval on experience 2 (Task 0) from test stream --
+100%|██████████| 21/21 [00:01<00:00, 10.89it/s]
+> Eval on experience 2 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 97.9319
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 60218.7236
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp002 = 0.2119
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp002 = 0.4158
+-- Starting eval on experience 3 (Task 0) from test stream --
+100%|██████████| 18/18 [00:01<00:00, 10.14it/s]
+> Eval on experience 3 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 98.6640
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 60219.0908
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp003 = 0.0135
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp003 = 0.2892
+-- Starting eval on experience 4 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00, 10.34it/s]
+> Eval on experience 4 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 98.0179
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 60219.4580
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp004 = 0.0188
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp004 = 0.8553
+-- Starting eval on experience 5 (Task 0) from test stream --
+100%|██████████| 23/23 [00:02<00:00, 10.76it/s]
+> Eval on experience 5 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 98.7435
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 60219.8252
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp005 = 0.3313
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60219.8252
+	StreamForgetting/eval_phase/test_stream = 0.2887
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.4490
+Start of experience:  6
+Current Classes:  [0]
+-- >> Start of training phase << --
+-- Starting training on experience 6 (Task 0) from train stream --
+100%|██████████| 60/60 [01:34<00:00,  1.58s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60220.3594
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60220.3594
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0265
+	Time_Epoch/train_phase/train_stream/Task000 = 94.5831
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.6088
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.6087
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.29it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 97.8889
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60220.8428
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.1743
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.8257
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:02<00:00,  9.37it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 96.4293
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60221.2100
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp001 = 0.1756
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.8214
+-- Starting eval on experience 2 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00,  9.09it/s]
+> Eval on experience 2 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 98.9646
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 60221.5771
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp002 = -0.0881
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp002 = 0.7158
+-- Starting eval on experience 3 (Task 0) from test stream --
+100%|██████████| 18/18 [00:01<00:00,  9.08it/s]
+> Eval on experience 3 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 96.9957
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 60221.9453
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp003 = 0.0471
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp003 = 0.2556
+-- Starting eval on experience 4 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00,  9.59it/s]
+> Eval on experience 4 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 96.8948
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 60222.3125
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp004 = 0.0228
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp004 = 0.8513
+-- Starting eval on experience 5 (Task 0) from test stream --
+100%|██████████| 23/23 [00:02<00:00,  9.72it/s]
+> Eval on experience 5 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 98.6049
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 60222.6797
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp005 = -0.3392
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp005 = 0.6705
+-- Starting eval on experience 6 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.40it/s]
+> Eval on experience 6 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp006 = 98.0752
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp006 = 60223.0479
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp006 = 0.6612
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60223.0479
+	StreamForgetting/eval_phase/test_stream = -0.0013
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.6913
+Start of experience:  7
+Current Classes:  [2]
+-- >> Start of training phase << --
+-- Starting training on experience 7 (Task 0) from train stream --
+100%|██████████| 60/60 [01:35<00:00,  1.59s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60223.5830
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60223.5830
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0260
+	Time_Epoch/train_phase/train_stream/Task000 = 95.1401
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.4747
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.6897
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:02<00:00,  9.89it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 100.0195
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60224.0664
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.1472
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.8528
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:02<00:00,  9.44it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 99.2521
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60224.4346
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp001 = 0.9292
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.0678
+-- Starting eval on experience 2 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00,  9.85it/s]
+> Eval on experience 2 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 98.8838
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 60224.8018
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp002 = -0.1594
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp002 = 0.7871
+-- Starting eval on experience 3 (Task 0) from test stream --
+100%|██████████| 18/18 [00:01<00:00,  9.44it/s]
+> Eval on experience 3 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 97.1663
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 60225.1699
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp003 = 0.0235
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp003 = 0.2791
+-- Starting eval on experience 4 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00, 10.17it/s]
+> Eval on experience 4 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 99.1002
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 60225.5371
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp004 = 0.0069
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp004 = 0.8672
+-- Starting eval on experience 5 (Task 0) from test stream --
+100%|██████████| 23/23 [00:02<00:00, 10.04it/s]
+> Eval on experience 5 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 99.2583
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 60225.9043
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp005 = -0.1471
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp005 = 0.4784
+-- Starting eval on experience 6 (Task 0) from test stream --
+100%|██████████| 20/20 [00:02<00:00,  9.72it/s]
+> Eval on experience 6 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp006 = 99.2809
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp006 = 60226.2725
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp006 = 0.3969
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp006 = 0.2643
+-- Starting eval on experience 7 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00,  9.34it/s]
+> Eval on experience 7 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp007 = 98.8053
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp007 = 60226.6396
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp007 = 0.6008
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60226.6396
+	StreamForgetting/eval_phase/test_stream = 0.1710
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.5287
+Start of experience:  8
+Current Classes:  [4]
+-- >> Start of training phase << --
+-- Starting training on experience 8 (Task 0) from train stream --
+100%|██████████| 59/59 [01:32<00:00,  1.57s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60227.1738
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60227.1738
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0265
+	Time_Epoch/train_phase/train_stream/Task000 = 92.4893
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.0601
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.2143
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.39it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 99.4785
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60227.6572
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.2495
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.7505
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.41it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 97.3840
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60228.0244
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp001 = 0.9733
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.0236
+-- Starting eval on experience 2 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00,  9.69it/s]
+> Eval on experience 2 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 98.9156
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 60228.3916
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp002 = -0.1673
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp002 = 0.7950
+-- Starting eval on experience 3 (Task 0) from test stream --
+100%|██████████| 18/18 [00:01<00:00,  9.54it/s]
+> Eval on experience 3 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 95.9616
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 60228.7598
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp003 = 0.0078
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp003 = 0.2948
+-- Starting eval on experience 4 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00, 10.04it/s]
+> Eval on experience 4 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 98.5502
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 60229.1270
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp004 = 0.2170
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp004 = 0.6571
+-- Starting eval on experience 5 (Task 0) from test stream --
+100%|██████████| 23/23 [00:02<00:00, 10.16it/s]
+> Eval on experience 5 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 98.2380
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 60229.4941
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp005 = -0.1833
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp005 = 0.5145
+-- Starting eval on experience 6 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.24it/s]
+> Eval on experience 6 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp006 = 97.9452
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp006 = 60229.8623
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp006 = 0.3929
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp006 = 0.2684
+-- Starting eval on experience 7 (Task 0) from test stream --
+100%|██████████| 21/21 [00:01<00:00, 10.51it/s]
+> Eval on experience 7 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp007 = 98.1324
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp007 = 60230.2295
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp007 = -0.2781
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp007 = 0.8789
+-- Starting eval on experience 8 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.17it/s]
+> Eval on experience 8 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp008 = 98.1358
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp008 = 60230.5977
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp008 = 0.2688
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60230.5977
+	StreamForgetting/eval_phase/test_stream = 0.1515
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.5003
+Start of experience:  9
+Current Classes:  [7]
+-- >> Start of training phase << --
+-- Starting training on experience 9 (Task 0) from train stream --
+100%|██████████| 63/63 [01:40<00:00,  1.59s/it]
+Epoch 0 ended.
+	DiskUsage_Epoch/train_phase/train_stream/Task000 = 60231.1318
+	DiskUsage_MB/train_phase/train_stream/Task000 = 60231.1318
+	RunningTime_Epoch/train_phase/train_stream/Task000 = 0.0253
+	Time_Epoch/train_phase/train_stream/Task000 = 100.3585
+	Top1_Acc_Epoch/train_phase/train_stream/Task000 = 0.1880
+	Top1_Acc_MB/train_phase/train_stream/Task000 = 0.0000
+-- >> End of training phase << --
+-- >> Start of eval phase << --
+-- Starting eval on experience 0 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.08it/s]
+> Eval on experience 0 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 96.5005
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp000 = 60231.6162
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp000 = 0.2547
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000 = 0.7453
+-- Starting eval on experience 1 (Task 0) from test stream --
+100%|██████████| 20/20 [00:01<00:00, 10.65it/s]
+> Eval on experience 1 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 97.6611
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp001 = 60231.9834
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp001 = 0.1643
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp001 = 0.8326
+-- Starting eval on experience 2 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00, 10.15it/s]
+> Eval on experience 2 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 98.1506
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp002 = 60232.3506
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp002 = 0.3515
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp002 = 0.2762
+-- Starting eval on experience 3 (Task 0) from test stream --
+100%|██████████| 18/18 [00:02<00:00,  8.98it/s]
+> Eval on experience 3 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 98.3765
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp003 = 60232.7178
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp003 = -0.1065
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp003 = 0.4092
+-- Starting eval on experience 4 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00,  9.50it/s]
+> Eval on experience 4 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 97.5565
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp004 = 60233.0859
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp004 = 0.6601
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp004 = 0.2141
+-- Starting eval on experience 5 (Task 0) from test stream --
+100%|██████████| 23/23 [00:02<00:00,  9.30it/s]
+> Eval on experience 5 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 97.6649
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp005 = 60233.4531
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp005 = -0.1674
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp005 = 0.4987
+-- Starting eval on experience 6 (Task 0) from test stream --
+100%|██████████| 20/20 [00:02<00:00,  9.43it/s]
+> Eval on experience 6 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp006 = 97.2987
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp006 = 60233.8213
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp006 = 0.1286
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp006 = 0.5327
+-- Starting eval on experience 7 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00,  9.95it/s]
+> Eval on experience 7 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp007 = 98.6418
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp007 = 60234.1885
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp007 = 0.2907
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp007 = 0.3101
+-- Starting eval on experience 8 (Task 0) from test stream --
+100%|██████████| 20/20 [00:02<00:00,  9.39it/s]
+> Eval on experience 8 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp008 = 96.4221
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp008 = 60234.5557
+	ExperienceForgetting/eval_phase/test_stream/Task000/Exp008 = -0.4664
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp008 = 0.7352
+-- Starting eval on experience 9 (Task 0) from test stream --
+100%|██████████| 21/21 [00:02<00:00, 10.36it/s]
+> Eval on experience 9 (Task 0) from test stream ended.
+	CPUUsage_Exp/eval_phase/test_stream/Task000/Exp009 = 96.6931
+	DiskUsage_Exp/eval_phase/test_stream/Task000/Exp009 = 60234.9238
+	Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp009 = 0.0000
+-- >> End of eval phase << --
+	DiskUsage_Stream/eval_phase/test_stream/Task000 = 60234.9238
+	StreamForgetting/eval_phase/test_stream = 0.1233
+	Top1_Acc_Stream/eval_phase/test_stream/Task000 = 0.4515
+
+Top1_Acc_Stream/eval_phase/test_stream/Task000
+1.0000
+0.8706
+0.7944
+0.6448
+0.6845
+0.4490
+0.6913
+0.5287
+0.5003
+0.4515
+
+StreamForgetting/eval_phase/test_stream
+0.0000
+0.2578
+0.1174
+0.1282
+0.1050
+0.2887
+-0.0013
+0.1710
+0.1515
+0.1233
+
+Top1_Acc_Epoch/train_phase/train_stream/Task000
+0.9998
+0.9624
+0.5166
+0.1880
+0.4823
+0.6326
+0.6088
+0.4747
+0.0601
+0.1880
+
+6
+8
+3
+5
+9
+1
+0
+2
+4
+7
+
+Top1_Acc_Exp/eval_phase/test_stream/Task000/Exp000
+1.0000
+0.7422
+0.8278
+0.7025
+0.6493
+0.6263
+0.8257
+0.8528
+0.7505
+0.7453
