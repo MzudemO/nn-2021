@@ -101,14 +101,12 @@ for e_t, s_t in grid:
 accuracies = np.array(accuracies)
 forgettings = np.array(forgettings)
 
-grid = list(grid)
-
 max_acc = np.max(accuracies)
-max_acc_parameters = grid[np.argmax(accuracies)]
+max_acc_parameters = thresholds[np.argmax(accuracies)]
 min_forgetting = np.min(forgettings)
-min_forgetting_parameters = grid[np.argmin(forgettings)]
+min_forgetting_parameters = thresholds[np.argmin(forgettings)]
 
-print(grid)
+print(thresholds)
 print(accuracies)
 print(forgetting)
 
