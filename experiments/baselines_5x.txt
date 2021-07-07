@@ -1,0 +1,232 @@
+SimpleMLP(
+  (features): Sequential(
+    (0): Linear(in_features=256, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Sequential(
+      (0): Linear(in_features=512, out_features=512, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.5, inplace=False)
+    )
+  )
+  (classifier): Linear(in_features=512, out_features=10, bias=True)
+)
+
+naive
+Final evaluation stream: 9.58% accuracy, 1.0 forgetting
+lwf
+Final evaluation stream: 9.59% accuracy, 0.9997767321981775 forgetting
+replay 10
+Final evaluation stream: 9.58% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 9.58% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 24.310000000000002% accuracy, 0.8232213864333123 forgetting
+replay 100
+Final evaluation stream: 20.89% accuracy, 0.8574705565469398 forgetting
+naive
+Final evaluation stream: 9.74% accuracy, 1.0 forgetting
+lwf
+Final evaluation stream: 20.03% accuracy, 0.8893783651492903 forgetting
+replay 10
+Final evaluation stream: 9.74% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 9.74% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 20.59% accuracy, 0.8607816302120246 forgetting
+replay 100
+Final evaluation stream: 22.27% accuracy, 0.8441104597892979 forgetting
+naive
+Final evaluation stream: 12.58% accuracy, 0.9660556687033266 forgetting
+lwf
+Final evaluation stream: 9.59% accuracy, 0.9998868522290112 forgetting
+replay 10
+Final evaluation stream: 9.58% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 9.58% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 28.62% accuracy, 0.7940020711169314 forgetting
+replay 100
+Final evaluation stream: 28.82% accuracy, 0.7966954786509204 forgetting
+naive
+Final evaluation stream: 11.78% accuracy, 0.9768600485303113 forgetting
+lwf
+Final evaluation stream: 9.81% accuracy, 0.9996608588572313 forgetting
+replay 10
+Final evaluation stream: 9.8% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 9.8% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 17.41% accuracy, 0.8126628674975913 forgetting
+replay 100
+Final evaluation stream: 18.88% accuracy, 0.7972025106799231 forgetting
+naive
+Final evaluation stream: 9.790000000000001% accuracy, 0.9976190476190475 forgetting
+lwf
+Final evaluation stream: 17.64% accuracy, 0.906235827664399 forgetting
+replay 10
+Final evaluation stream: 9.58% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 9.58% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 19.830000000000002% accuracy, 0.8724304582851552 forgetting
+replay 100
+Final evaluation stream: 19.81% accuracy, 0.8730888080062206 forgetting
+
+==================
+==================
+==================
+
+SimpleMLP(
+  (features): Sequential(
+    (0): Linear(in_features=256, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Sequential(
+      (0): Linear(in_features=512, out_features=512, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.5, inplace=False)
+    )
+    (4): Sequential(
+      (0): Linear(in_features=512, out_features=512, bias=True)
+      (1): ReLU(inplace=True)
+      (2): Dropout(p=0.5, inplace=False)
+    )
+  )
+  (classifier): Linear(in_features=512, out_features=10, bias=True)
+)
+
+naive
+Final evaluation stream: 11.35% accuracy, 0.7794279427942794 forgetting
+lwf
+Final evaluation stream: 12.22% accuracy, 0.7708470847084709 forgetting
+replay 10
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 15.409999999999998% accuracy, 0.7202766969303934 forgetting
+replay 100
+Final evaluation stream: 18.35% accuracy, 0.6921098570617201 forgetting
+naive
+Final evaluation stream: 10.100000000000001% accuracy, 0.8888888888888888 forgetting
+lwf
+Final evaluation stream: 10.100000000000001% accuracy, 0.8888888888888888 forgetting
+replay 10
+Final evaluation stream: 10.100000000000001% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 10.100000000000001% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 19.189999999999998% accuracy, 0.7826162634618469 forgetting
+replay 100
+Final evaluation stream: 18.529999999999998% accuracy, 0.8892386173316343 forgetting
+naive
+Final evaluation stream: 19.37% accuracy, 0.8047660090323616 forgetting
+lwf
+Final evaluation stream: 10.32% accuracy, 0.9743678960797959 forgetting
+replay 10
+Final evaluation stream: 10.32% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 10.32% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 9.959999999999999% accuracy, 0.6772921410887179 forgetting
+replay 100
+Final evaluation stream: 24.099999999999998% accuracy, 0.5707043424341135 forgetting
+naive
+Final evaluation stream: 10.280000000000001% accuracy, 0.8888888888888888 forgetting
+lwf
+Final evaluation stream: 10.280000000000001% accuracy, 0.8821000226295541 forgetting
+replay 10
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 17.169999999999998% accuracy, 0.7244963901501118 forgetting
+replay 100
+Final evaluation stream: 10.639999999999999% accuracy, 0.8250500342552584 forgetting
+naive
+Final evaluation stream: 11.08% accuracy, 0.8750540423692175 forgetting
+lwf
+Final evaluation stream: 9.8% accuracy, 0.8888888888888888 forgetting
+replay 10
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+replay 50
+Final evaluation stream: 14.27% accuracy, 0.7261538981456385 forgetting
+replay 100
+Final evaluation stream: 26.119999999999997% accuracy, 0.5944823070288854 forgetting
+
+==================
+==================
+==================
+
+SimpleMLP(
+  (features): Sequential(
+    (0): Linear(in_features=256, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+    (2): Dropout(p=0.5, inplace=False)
+  )
+  (classifier): Linear(in_features=512, out_features=10, bias=True)
+)
+
+naive
+Final evaluation stream: 14.66% accuracy, 0.952383825275947 forgetting
+lwf
+Final evaluation stream: 10.67% accuracy, 0.991483113069016 forgetting
+replay 10
+Final evaluation stream: 19.39% accuracy, 0.9057290480316171 forgetting
+replay 10 ewc
+Final evaluation stream: 17.34% accuracy, 0.9258523309433137 forgetting
+replay 50
+Final evaluation stream: 49.8% accuracy, 0.5580979033592713 forgetting
+replay 100
+Final evaluation stream: 53.779999999999994% accuracy, 0.5162371205085852 forgetting
+naive
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+lwf
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+replay 10
+Final evaluation stream: 8.92% accuracy, 1.0 forgetting
+replay 10 ewc
+Final evaluation stream: 8.92% accuracy, 0.9995599559955995 forgetting
+replay 50
+Final evaluation stream: 31.64% accuracy, 0.7561914079558713 forgetting
+replay 100
+Final evaluation stream: 34.239999999999995% accuracy, 0.72631126414994 forgetting
+naive
+Final evaluation stream: 11.559999999999999% accuracy, 0.9976874793524941 forgetting
+lwf
+Final evaluation stream: 16.84% accuracy, 0.9395206537129648 forgetting
+replay 10
+Final evaluation stream: 15.45% accuracy, 0.9537773964512206 forgetting
+replay 10 ewc
+Final evaluation stream: 21.25% accuracy, 0.8886507549673266 forgetting
+replay 50
+Final evaluation stream: 44.43% accuracy, 0.6177098740898003 forgetting
+replay 100
+Final evaluation stream: 49.53% accuracy, 0.5582431719471248 forgetting
+naive
+Final evaluation stream: 9.700000000000001% accuracy, 0.9986798679867986 forgetting
+lwf
+Final evaluation stream: 9.65% accuracy, 0.99910535896639 forgetting
+replay 10
+Final evaluation stream: 9.629999999999999% accuracy, 0.9994595763078252 forgetting
+replay 10 ewc
+Final evaluation stream: 10.13% accuracy, 0.993514915693904 forgetting
+replay 50
+Final evaluation stream: 37.88% accuracy, 0.691727200508263 forgetting
+replay 100
+Final evaluation stream: 39.300000000000004% accuracy, 0.6757191327053338 forgetting
+naive
+Final evaluation stream: 9.8% accuracy, 1.0 forgetting
+lwf
+Final evaluation stream: 9.8% accuracy, 1.0 forgetting
+replay 10
+Final evaluation stream: 22.42% accuracy, 0.8717956985898366 forgetting
+replay 10 ewc
+Final evaluation stream: 19.89% accuracy, 0.8974535806997795 forgetting
+replay 50
+Final evaluation stream: 40.17% accuracy, 0.6699212867219152 forgetting
+replay 100
+Final evaluation stream: 41.91% accuracy, 0.6487566314321978 forgetting
