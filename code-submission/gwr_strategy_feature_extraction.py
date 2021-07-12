@@ -20,7 +20,7 @@ from episodic_gwr import EpisodicGWR
 from data_utils import GWRDataset
 
 ### ADAPTED FROM AVALANCHE BASESTRATEGY (https://github.com/ContinualAI/avalanche/blob/master/avalanche/training/strategies/base_strategy.py)
-class GWRStrategy:
+class GWRStrategyFE:
     def __init__(
         self,
         train_mb_size: int = 1,
@@ -101,6 +101,8 @@ class GWRStrategy:
         self.e_labels = config["e_labels"]
 
         self.s_labels = config["s_labels"]
+
+        self.feature_extractor = config["feature_extractor"]
 
         self.replay_size = (self.num_context * 2) + 1
 
@@ -429,7 +431,7 @@ class GWRStrategy:
             # Forward
             self.before_forward(**kwargs)
 
-            vectors = self.mbatch[0]
+            vectors = self.feature_extractor(self.mbatch[0])
             labels = np.zeros((len(self.e_labels), len(self.mbatch[1])))
             labels[0] = self.mbatch[1]
             labels[1] = self.mbatch[1]
@@ -485,7 +487,7 @@ class GWRStrategy:
 
             e_weights, e_labels = self.episodic.test(vectors, labels, ret_vecs=True)
             pred_labels = self.semantic.test(e_weights, e_labels, ret_labels=True)
-            self.mb_output = torch.from_numpy(pred_labels[0]).long()
+            self.mb_output = pred_labels[0]
 
             self.after_forward(**kwargs)
 
@@ -608,13 +610,13 @@ class GWRStrategy:
 
             self.before_eval_forward(**kwargs)
 
-            vectors = self.mbatch[0]
+            vectors = self.feature_extractor(self.mbatch[0])
             labels = np.zeros((len(self.e_labels), len(self.mbatch[1])))
             labels[0] = self.mbatch[1]
             labels[1] = self.mbatch[1]
             e_weights, e_labels = self.episodic.test(vectors, labels, ret_vecs=True)
             labels = self.semantic.test(e_weights, e_labels, ret_labels=True)
-            self.mb_output = torch.from_numpy(labels[0]).long()
+            self.mb_output = labels[0]
 
             self.after_eval_forward(**kwargs)
 
