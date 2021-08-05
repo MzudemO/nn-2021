@@ -10,11 +10,11 @@ Advisor: Prof. Dr. Chu Kiong Loo
 
 `/code-submission`:
 
-This folder contains the code necessary to run the experiments
+This folder contains the code necessary to run the experiments.
 
 `/seminar-paper`:
 
-This folder contains code used to create graphs for the paper as well as unfinished work not used in the paper.
+This folder contains code used to create graphs for the paper as well as unfinished work not used in the paper. It's here only for archive purposes.
 
 ## Requirements:
 
