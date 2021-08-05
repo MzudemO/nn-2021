@@ -4,6 +4,8 @@
 
 Moritz Lahann, Diana Rueda
 
+Advisor: Prof. Dr. Chu Kiong Loo
+
 ## Contents
 
 `/code-submission`:
